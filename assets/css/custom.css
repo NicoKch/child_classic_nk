@@ -1,0 +1,55 @@
+/*
+ * Custom code goes here.
+ * A template should always ship with an empty custom.css
+ */
+
+ /* Cacher le logo uniquement sur la page d'accueil */
+
+
+#wrapper, #content {
+    background-color: #fff9f2;
+}
+
+.header-nav, .header-top {
+    background-color: #fefefe;
+}
+
+#header .header-top a[data-depth="0"] {
+    color: #f85e38; 
+}
+
+#search_widget form i {
+    padding-top: 0.7rem;
+}
+
+
+/* HOMEPAGE */
+
+body#index h1 {
+    text-align: center;
+    scale: 0.6;
+}
+
+@media (max-width: 767px) {
+    body#index h1 {
+        scale: 1;
+    }
+}
+
+#subcategories {
+    background-color: #fff9f2;
+}
+
+#subcategories ul li .subcategory-image a img {
+    width: 100%;
+    height: auto; 
+}
+
+.replace-2x:hover {
+    scale: 1.1;
+    transition: all 0.8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+#subcategories ul li .subcategory-image a {
+    padding: 0;
+}

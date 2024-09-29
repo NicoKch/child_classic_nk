@@ -66,8 +66,6 @@ body#index h1 {
 
 #search_widget {
     display: flex;
-    align-content: center;
-    justify-content: center;
     margin-top: 5px;
 }
 
@@ -78,4 +76,104 @@ body#index h1 {
 .header-top hr {
     margin-left: -20%;
     margin-right: -20%;
+}
+
+.banner {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    text-align: center;
+}
+
+.about-me {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    text-align: center;
+
+}
+
+.about-me::before {
+    content: '';
+    position: absolute; /* Positionnement absolu */
+    top: 0; /* En haut du conteneur */
+    left: 0; /* À gauche du conteneur */
+    right: 0; /* À droite du conteneur */
+    bottom: 0; /* En bas du conteneur */
+    background-image: url(http://localhost/prestashop/themes/child_classic_nk/assets/images/About-me/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 10%;
+}
+.grid-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 10px;
+    grid-auto-rows: auto;
+}
+
+.grid-container .text-block {
+    z-index: 1;
+    text-align: justify;
+    line-height: 1.4;
+    grid-column: 1 / 7;
+    grid-row: 1;
+    background-color: #FFF9F2;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
+}
+
+.text-block h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.grid-container .photo-1 {
+    float: left;
+    height: 220px;
+    width: 150px;
+    object-fit: cover;
+    shape-outside: margin-box;
+    margin: 0 10px 0 0;
+    object-position: right bottom;
+    transform: rotate(-10deg) translate(-20px, -10px);
+}
+
+.grid-container .photo-2 {
+    float: right;
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    transform: translate(17px, 20px) rotate(13deg);
+    shape-outside: margin-box;
+    margin: 0 0 0 10;
+}
+
+.grid-container .photo-3 {
+    grid-column: 11;
+    grid-row: 1;
+    object-fit: cover;
+    background-color: blueviolet;
+    height: 400px;
+    width: 250px;
+    margin: 1rem;
+    transform: translate(0, 20%);
+    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
+
+}
+
+.grid-container .photo-4 {
+    grid-column: 10;
+    grid-row: 1;
+    object-fit: cover;
+    background-color: rgb(43, 194, 76);
+    transform: translate(100px, 300px) rotate(-20deg);
+    height: 200px;
+    width: 120px;
+    margin: 1rem;
 }

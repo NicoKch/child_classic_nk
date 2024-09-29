@@ -53,3 +53,29 @@ body#index h1 {
 #subcategories ul li .subcategory-image a {
     padding: 0;
 }
+
+.search {
+    padding-top: 0.7rem;
+}
+
+#search_widget form input {
+    padding: 5px;
+    text-align: center;
+
+}
+
+#search_widget {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.header-top-right {
+    text-align: center;
+}
+
+.header-top hr {
+    margin-left: -20%;
+    margin-right: -20%;
+}

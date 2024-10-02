@@ -22,7 +22,6 @@
     padding-top: 0.7rem;
 }
 
-
 /* HOMEPAGE */
 
 body#index h1 {
@@ -92,41 +91,48 @@ body#index h1 {
     transform: translateX(-50%);
     width: 100vw;
     text-align: center;
-
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-.about-me::before {
+/* .about-me::before {
     content: '';
-    position: absolute; /* Positionnement absolu */
-    top: 0; /* En haut du conteneur */
-    left: 0; /* À gauche du conteneur */
-    right: 0; /* À droite du conteneur */
-    bottom: 0; /* En bas du conteneur */
-    background-image: url(http://localhost/prestashop/themes/child_classic_nk/assets/images/About-me/background.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(http://localhost/prestashop/themes/child_classic_nk/assets/images/About-me/background.png);
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 10%;
-}
+    opacity: 30%;
+} */
+
 .grid-container {
     text-align: center;
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     gap: 10px;
     grid-auto-rows: auto;
+    /* background-image: url(http://localhost/prestashop/themes/child_classic_nk/assets/images/About-me/background.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .grid-container .text-block {
     z-index: 1;
     text-align: justify;
     line-height: 1.4;
-    grid-column: 1 / 7;
+    grid-column: 1 / 8;
     grid-row: 1;
-    background-color: #FFF9F2;
-    margin: 1rem;
+    background-color: #fff9f2;
     padding: 1rem;
-    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
+    /* box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.1); */
 }
 
+.grid-container .text-block p {
+    color: black;
+}
 .text-block h2 {
     text-align: center;
     margin-bottom: 10px;
@@ -149,27 +155,28 @@ body#index h1 {
     height: 160px;
     width: 160px;
     object-fit: cover;
-    transform: translate(17px, 20px) rotate(13deg);
+    transform: translate(40px, 50px) rotate(13deg);
     shape-outside: margin-box;
+    z-index: 3;
     margin: 0 0 0 10;
 }
 
 .grid-container .photo-3 {
-    grid-column: 11;
+    grid-column: 9 / 11;
     grid-row: 1;
     object-fit: cover;
     background-color: blueviolet;
-    height: 400px;
-    width: 250px;
-    margin: 1rem;
-    transform: translate(0, 20%);
-    box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2);
+    height: 100%;
+    width: 300px;
+    z-index: 1;
+    /* box-shadow: 5px 5px 15px rgb(0, 0, 0, 0.2); */
 
 }
 
 .grid-container .photo-4 {
     grid-column: 10;
     grid-row: 1;
+    z-index: 2;
     object-fit: cover;
     background-color: rgb(43, 194, 76);
     transform: translate(100px, 300px) rotate(-20deg);

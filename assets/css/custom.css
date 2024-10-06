@@ -21,6 +21,7 @@
 #wrapper {
     background-color: #fff9f2;
     background-image: url(http://localhost/prestashop/themes/child_classic_nk/assets/images/background.png);
+    z-index: -2;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Belleza-Regular" !important;
@@ -433,4 +434,54 @@ body#index h1 {
         background-image: url(http://localhost/prestashop/themes/child_classic_nk/assets/images/About-me/background-text-mobile-small.png);
 
     }
+}
+
+/* CUSTOM TEXT HOME PAGE */
+
+#index #custom-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: unset;
+    z-index: 2;
+    height: 700px;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#index #custom-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 100%;
+    width: 120%;
+    background-image: url(http://localhost/prestashop/themes/child_classic_nk/assets/images/catch-phrase-background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+#index #custom-text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    height: 40%;
+    width: 85%;
+    background-color: #F88E86;
+    z-index: -1;
+    opacity: 5%;
+    border-radius: 6px;
+}
+
+#index #custom-text h2 {
+    font-weight: 600;
+    font-size: 1.5rem !important;
+    line-height: 1.7rem;
+    width: 80%;
 }

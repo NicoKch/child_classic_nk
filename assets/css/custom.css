@@ -113,11 +113,15 @@ body#index h1 {
     text-align: center;
 }
 
+@media (min-width: 1500px) {
+
 .about-me {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
+    max-width: 1920px;
+    min-width: 1600px;
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -138,7 +142,7 @@ body#index h1 {
 
 } */
 
-.grid-container {
+.about-me .grid-container {
     text-align: center;
     display: grid;
     grid-template-columns: repeat(15, 1fr);
@@ -150,22 +154,24 @@ body#index h1 {
     z-index: 1;
     line-height: 1.4;
     grid-column: 1 / 15;
+    grid-row: 1;
     padding: 1rem;
-    transform: translate(-100px, 155px) rotate(-6deg);
+    transform: translate(-160px, 155px) rotate(-6deg);
+    height: 500px;
+    width: 820px;
 }
 
 
 .grid-container .text-block p {
-    color: black;
+    color: rgb(0, 0, 0);
     text-align: center;
-    opacity: 90%;
-    width: 700px;
-    height: 350px; 
+    opacity: 95%;
+    width: 100%;
+    max-height: 70%;
     overflow-y: scroll; 
     font-size: 1.2rem;
-    padding-top: 45px;
+    padding-top: 55px;
     padding-right: 1.2rem;
-    padding-bottom: 70px;
     margin-bottom: 0;
     position: relative;
 }
@@ -175,30 +181,31 @@ body#index h1 {
 .grid-container .text-block p::after {
     content: "";
     position: fixed;
-    margin-top: 40px;
-    margin-bottom: 70px;
-    padding-bottom: 85px;
+    height: 100%;
+    width: 95%;
     left: 0;
     right: 0;
-    height: 40px; /* Hauteur de la zone floue */
+    height: 60px; /* Hauteur de la zone floue */
     pointer-events: none; /* Permet de cliquer à travers */
 }
 
 .grid-container .text-block p::before {
-    top: 0; /* Positionne l'effet en haut */
+    top: 14%; /* Positionne l'effet en haut */
     background: linear-gradient(to bottom, rgba(252, 218, 216, 1), rgba(252, 218, 216, 0)); /* Dégradé de blanc à transparent */
 }
 
 .grid-container .text-block p::after {
-    bottom: 0; /* Positionne l'effet en bas */
+    bottom: 19%; /* Positionne l'effet en bas */
     background: linear-gradient(to top, rgba(252, 218, 216, 1), rgba(252, 218, 216, 0)); /* Dégradé de blanc à transparent */
 }
 
 .text-block h2 {
+    width: 100%;
     text-align: center;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    font-size: 1.5rem;
+    margin: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
 }
 
 .grid-container .photo-3 {
@@ -207,10 +214,11 @@ body#index h1 {
     object-fit: cover;
     height: 480px;
     width: 350px;
-    transform: translate(-5px, 30px);
+    transform: translate(50px, 50px);
     border: solid;
     border-width: 17px 12px 17px 12px;
     border-color: #90D0DC;
+    box-shadow: -15px 10px 10px 10px rgb(0, 0, 0, 0.1);
 }
 
 .grid-container .photo-4 {
@@ -221,17 +229,20 @@ body#index h1 {
     height: 335px;
     width: 335px;
     margin: 1rem;
-    transform: translate(220px, -138px) rotate(9deg);
+    transform: translate(250px, -160px) rotate(9deg);
     border: solid;
     border-width: 17px 12px 20px 12px;
     border-color: #FCD9D7;
+    box-shadow: -15px 10px 10px 10px rgb(0, 0, 0, 0.1);
 }
 
 .about-me .learn-more {
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-column: 9;
+    position: absolute;
+    top: 57%;
+    left: 33%;
     width: 330px;
     height: 100px;
     transform: translate(45px, 240px);
@@ -245,11 +256,11 @@ body#index h1 {
 }
 
 .scroll-indicator {
-    scale: 1.2;
+    scale: 0.4;
     position: absolute;
-    bottom: 50%;
-    left: 100%;
-    transform: translateX(-50%);
+    opacity: 90%;
+    top: 23%;
+    left: -8%;
     font-size: 24px;
     animation: bounce 1.5s infinite;
     color: #333; /* Couleur de la flèche */
@@ -261,5 +272,165 @@ body#index h1 {
     }
     50% {
         transform: translateX(-50%) translateY(10px);
+    }
+}
+
+    .about-me .photo-by {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 1500px) {
+
+
+    .grid-container .photo-3 {
+        grid-column: 15;
+        grid-row: 1;
+        object-fit: cover;
+        height: 240px;
+        width: 175px;
+        border: solid;
+        border-width: 8px 6px 8px 6px;
+        border-color: #90D0DC;
+        box-shadow: -15px 10px 10px 10px rgb(0, 0, 0, 0.1);
+        margin-top: 1rem;
+        z-index: 2;
+    }
+    
+    .grid-container .photo-4 {
+        grid-column: 15;
+        grid-row: 2;
+        z-index: 2;
+        object-fit: cover;
+        height: 160px;
+        width: 160px;
+        border: solid;
+        border-width: 8px 6px 10px 6px;
+        border-color: #FCD9D7;
+        box-shadow: -15px 10px 10px 10px rgb(0, 0, 0, 0.1);
+        transform: translate(50px, -70px) rotate(15deg);
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .grid-container .text-block p {
+        color: black;
+        text-align: center;
+        opacity: 95%;
+        height: 400px;
+        overflow-y: scroll; 
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        margin-left: 15px;
+        z-index: 2;
+        border-top: solid #90D0DC;
+        border-bottom: solid #90D0DC;
+        border-width: 1px;
+    }
+
+    .grid-container .text-block {
+        z-index: 2;
+    }
+
+    .grid-container .text-block::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 53%;
+        width: 100%;
+        background-color: #90D0DC;
+        background-attachment: fixed;
+        opacity: 10%;
+        z-index: -1;
+        border-radius: 6px;
+        pointer-events: none;
+    }
+
+    .text-block h2 {
+        text-align: center;
+        margin: 0;
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        z-index: 3;
+    }
+
+    .about-me .grid-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .about-me .grid-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-image: url(http://localhost/prestashop/themes/child_classic_nk/assets/images/About-me/quadrillage.png);
+        background-position: right 35% bottom 10%;
+        background-repeat: no-repeat;
+        pointer-events: none; /* Permet de cliquer à travers */
+    }
+
+    .about-me .learn-more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Miniver-Regular" !important;
+        font-size: 2.5rem;
+        color: black;
+    }
+
+    .about-me .learn-more {
+        background-image: url(http://localhost/prestashop/themes/child_classic_nk/assets/images/common/yellow-paint.png);
+        height: 150px;
+        width: 420px;
+        z-index: 2;
+    }
+
+    .about-me .photo-by {
+        transform: translate(0, 45px);
+    }
+}
+
+@media (max-width : 768px) {
+
+    #header .header-top {
+        display: none;
+    }
+
+    .about-me {
+        position: relative;
+    }
+
+    .about-me::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100vw;
+        height: 100%;
+        transform: translate(-50%);
+        background-image: url(http://localhost/prestashop/themes/child_classic_nk/assets/images/About-me/background-text-mobile-large.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-me::before {
+        background-image: url(http://localhost/prestashop/themes/child_classic_nk/assets/images/About-me/background-text-mobile-small.png);
+
     }
 }

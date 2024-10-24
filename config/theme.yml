@@ -1,6 +1,6 @@
 parent: classic
 name: child_classic_nk
-display_name: Child theme of classic's theme
+display_name: child_classic_nk
 version: 1.0.0
 assets:
   use_parent_assets: false
